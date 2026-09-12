@@ -41,8 +41,8 @@
     }
     .items {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 12px;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
       margin: 0 0 28px;
       padding: 0 12px;
     }
@@ -52,22 +52,24 @@
       background: #ffffff;
       border-radius: 10px;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
-      padding: 10px;
+      padding: 0 0 12px;
+      overflow: hidden;
     }
     .item-image-box {
       width: 100%;
       aspect-ratio: 1 / 1;
-      margin-bottom: 8px;
-      background: #f0f0f0;
-      border-radius: 6px;
+      margin: 0 0 10px;
+      background: #ffffff;
+      border-radius: 10px 10px 0 0;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
     }
     .item-image-box img {
-      max-width: 100%;
-      max-height: 100%;
+      display: block;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
     }
     .category-badge {
@@ -114,6 +116,18 @@
       text-align: center;
       text-decoration: none;
     }
+    .category-badge,
+    .item-name,
+    .item-price,
+    .item-shop {
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+    .item-button,
+    .no-link {
+      margin-left: 12px;
+      margin-right: 12px;
+    }
     .no-link {
       display: block;
       margin-top: auto;
@@ -121,6 +135,11 @@
       text-align: center;
       font-size: 0.8rem;
       color: #999;
+    }
+    @media (min-width: 720px) {
+      .items {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      }
     }
     footer {
       padding: 16px 12px 32px;
@@ -136,12 +155,39 @@
 <p class="disclaimer">価格や在庫は変更される場合があります。最新情報は楽天市場でご確認ください</p>
 <section><h2 class="category-heading">美容</h2><div class="items">
       <div class="item">
-        <div class="item-image-box"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/orbis-shop/cabinet/orbis_prd/93/_o0093.jpg?_ex=128x128" alt="オルビス ザ リンクルセラム 美容液 シワ 美白 ナイアシンアミド しわ ハリ そばかす スキンケア ORBIS 公式店" loading="lazy"></div>
+        <div class="item-image-box"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/orbis-shop/cabinet/orbis_prd/93/_o0093.jpg?_ex=800x800" alt="オルビス ザ リンクルセラム 美容液 シワ 美白 ナイアシンアミド しわ ハリ そばかす スキンケア ORBIS 公式店" loading="lazy"></div>
         <span class="category-badge">美容</span>
         <div class="item-name">オルビス ザ リンクルセラム 美容液 シワ 美白 ナイアシンアミド しわ ハリ そばかす スキンケア ORBIS 公式店</div>
         <div class="item-price">4,950円</div>
         <div class="item-shop">オルビス公式 楽天市場店</div>
         <a class="item-button" href="https://hb.afl.rakuten.co.jp/hgc/g00txe1o.7qa2n60f.g00txe1o.7qa2oa6d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Forbis-shop%2Fo0093%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Forbis-shop%2Fi%2F10000787%2F&amp;rafcid=wsc_i_is_06f103fd-6844-4075-9600-c2429992b8eb" rel="nofollow sponsored noopener noreferrer" target="_blank">楽天市場で商品を見る</a>
+      </div>
+    </div></section><section><h2 class="category-heading">ファッション</h2><div class="items">
+      <div class="item">
+        <div class="item-image-box"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/f281000-kobe/cabinet/frp_goods/frp009/12166025.jpg?_ex=800x800" alt="【ふるさと納税】【ファミリア】familiar トートバッグ | バッグ ファッション 人気 おすすめ 送料無料" loading="lazy"></div>
+        <span class="category-badge">ファッション</span>
+        <div class="item-name">【ふるさと納税】【ファミリア】familiar トートバッグ | バッグ ファッション 人気 おすすめ 送料無料</div>
+        <div class="item-price">110,000円</div>
+        <div class="item-shop">兵庫県神戸市</div>
+        <a class="item-button" href="https://hb.afl.rakuten.co.jp/hgc/g00sl9mo.7qa2n786.g00sl9mo.7qa2o7ba/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff281000-kobe%2Ff0722-5-5%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ff281000-kobe%2Fi%2F10002391%2F&amp;rafcid=wsc_i_is_06f103fd-6844-4075-9600-c2429992b8eb" rel="nofollow sponsored noopener noreferrer" target="_blank">楽天市場で商品を見る</a>
+      </div>
+    </div></section><section><h2 class="category-heading">家電</h2><div class="items">
+      <div class="item">
+        <div class="item-image-box"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/f272183-daito/cabinet/frp_goods/frp006/100006682.jpg?_ex=800x800" alt="【ふるさと納税】象印 【最高峰】圧力IH炊飯ジャー 5.5合炊き ( 炊飯器 )「 炎舞炊き 」 NXAB10-WZ 白 | 家電 キッチン家電 調理家電 生活家電 電化製品 家電日用品 人気 おすすめ 送料無料 炊飯器 炎舞 えんぶだき 5.5合 大東市" loading="lazy"></div>
+        <span class="category-badge">家電</span>
+        <div class="item-name">【ふるさと納税】象印 【最高峰】圧力IH炊飯ジャー 5.5合炊き ( 炊飯器 )「 炎舞炊き 」 NXAB10-WZ 白 | 家電 キッチン家電 調理家電 生活家電 電化製品 家電日用品 人気 おすすめ 送料無料 炊飯器 炎舞 えんぶだき 5.5合 大東市</div>
+        <div class="item-price">390,000円</div>
+        <div class="item-shop">大阪府大東市</div>
+        <a class="item-button" href="https://hb.afl.rakuten.co.jp/hgc/g00u0r2o.7qa2n850.g00u0r2o.7qa2oe8a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff272183-daito%2Fak81%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ff272183-daito%2Fi%2F10000589%2F&amp;rafcid=wsc_i_is_06f103fd-6844-4075-9600-c2429992b8eb" rel="nofollow sponsored noopener noreferrer" target="_blank">楽天市場で商品を見る</a>
+      </div>
+    </div></section><section><h2 class="category-heading">その他</h2><div class="items">
+      <div class="item">
+        <div class="item-image-box"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/minimonkey/cabinet/keen2/keen-uneek-1.jpg?_ex=800x800" alt="キーン ユニーク KEEN UNEEK スポーツサンダル メンズ アウトドア サンダル ビーチサンダル キャンプ スニーカー メンズサンダル スリッポン レジャー フェス ビーサン 旅行 海 川 山 プール 水陸両用 人気 代表作 正規品 送料無料" loading="lazy"></div>
+        <span class="category-badge">その他</span>
+        <div class="item-name">キーン ユニーク KEEN UNEEK スポーツサンダル メンズ アウトドア サンダル ビーチサンダル キャンプ スニーカー メンズサンダル スリッポン レジャー フェス ビーサン 旅行 海 川 山 プール 水陸両用 人気 代表作 正規品 送料無料</div>
+        <div class="item-price">15,400円</div>
+        <div class="item-shop">MiniMonkey スニーカー&amp;ブーツ</div>
+        <a class="item-button" href="https://hb.afl.rakuten.co.jp/hgc/g00r9rzo.7qa2n7a9.g00r9rzo.7qa2o48e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fminimonkey%2Fkeen-uneek%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fminimonkey%2Fi%2F10009034%2F&amp;rafcid=wsc_i_is_06f103fd-6844-4075-9600-c2429992b8eb" rel="nofollow sponsored noopener noreferrer" target="_blank">楽天市場で商品を見る</a>
       </div>
     </div></section>
 <footer>価格や在庫は変更される場合があります。最新情報は楽天市場でご確認ください</footer>
